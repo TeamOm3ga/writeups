@@ -31,9 +31,9 @@ Nothing is there since they said they would delete it, but checking the Internet
 reveals a [Pastebin](https://pastebin.com/8bk9qLX1) instructing us to find the leader
 of EWord. It also has a link to a [second Pastebin](https://pastebin.com/PZvaSjA0).
 
-The second Pastebin contains a Base64 image.
+The second Pastebin contains a Base64 image, decoded below.
 
-![Instagram story of a Hilton hotel](./fraud.jpg)
+<p style="text-align:center"><img src="./fraud.jpg" width="250px" /></p>
 
 This is an Instagram story. Cropping the hotel building and running it through Yandex
 reverse image search reveals that this is the Hilton in Podgorica, Montenegro.

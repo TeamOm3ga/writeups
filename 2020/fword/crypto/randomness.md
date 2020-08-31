@@ -109,7 +109,7 @@ d(n) = a * d(n-1) (mod m)
 z(n) = d(n+2) * d(n) - d(n+1) * d(n+1) (mod m)
 z(n) = a*a*d(n) * d(n) - a*d(n) * a*d(n) (mod m)
 z(n) = 0 (mod m)
-m = gcd(z(n), z(n+1), ...)
+m = gcd(z(0), z(1), ...)
 ```
 
 Let's write some code to do all of that:

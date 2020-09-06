@@ -11,7 +11,7 @@
 
 Two files provided in `pwnkemon.zip`:
 
-* [`pwnkemon.logicdata`](./pwnkemon.jpg)
+* [`pwnkemon.logicdata`](./pwnkemon.logicdata)
 * `pwnkemon.jpg` ![pwnkemon.jpg](./pwnkemon.jpg)
 
 ## Solution

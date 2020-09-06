@@ -12,6 +12,7 @@ Miscellaneous CTF writeups by Team Om3ga.
 
 ### 2020
 
-|  CTF  | Placement | Points | Writeups                     |
-| :---: | --------- | ------ | ---------------------------- |
-| FWord | 57th      | 3882   | [./2020/fword](./2020/fword) |
+|                   CTF                    | Placement | Points | Writeups                     |
+| :--------------------------------------: | --------- | ------ | ---------------------------- |
+|                  FWord                   | 57th      | 3882   | [./2020/fword](./2020/fword) |
+| [ALLES!](https://ctftime.org/event/1091) | 29th      | 1236   | [./2020/alles](./2020/alles) |

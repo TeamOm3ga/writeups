@@ -76,7 +76,78 @@ e1: c9                      leave
 ```
 
 Walking through this program, we see that the results of four sets of multiplications (`imul`, also challenge name) are stored into memory.
-As hex, the four numbers concatenated are `666c61677b73757033725f76346c31645f7072306772346d7d`.
+
+We translated the output from the online converter to NASM to make it compilable and debuggable:
+
+```asm
+; baby_mult.nasm
+    [BITS 64]
+global _start
+
+_start:
+    push   rbp
+    mov    rbp,rsp
+    sub    rsp,0x18
+    mov    QWORD  [rbp-0x8],0x4f
+    mov rax,0x14be74f15
+    mov    QWORD  [rbp-0x10],rax
+    mov    QWORD  [rbp-0x18],0x4
+    mov    QWORD  [rbp-0x20],0x3
+    mov    QWORD  [rbp-0x28],0x13
+    mov    QWORD  [rbp-0x30],0x115
+    mov rax,0x77cf4b645b61
+    mov    QWORD  [rbp-0x38],rax
+    mov    QWORD  [rbp-0x40],0x2
+    mov    QWORD  [rbp-0x48],0x11
+    mov    QWORD  [rbp-0x50],0x21c1
+    mov    QWORD  [rbp-0x58],0x182265e9
+    mov    QWORD  [rbp-0x60],0x833
+    mov    QWORD  [rbp-0x68],0xaab
+    mov    QWORD  [rbp-0x70],0x8daaad
+    mov    rax,QWORD  [rbp-0x8]
+    imul   rax,QWORD  [rbp-0x10]
+    mov    QWORD  [rbp-0x78],rax
+    mov    rax,QWORD  [rbp-0x18]
+    imul   rax,QWORD  [rbp-0x20]
+    imul   rax,QWORD  [rbp-0x28]
+    imul   rax,QWORD  [rbp-0x30]
+    imul   rax,QWORD  [rbp-0x38]
+    mov    QWORD  [rbp-0x80],rax
+    mov    rax,QWORD  [rbp-0x40]
+    imul   rax,QWORD  [rbp-0x48]
+    imul   rax,QWORD  [rbp-0x50]
+    imul   rax,QWORD  [rbp-0x58]
+    mov    QWORD  [rbp-0x88],rax
+    mov    rax,QWORD  [rbp-0x60]
+    imul   rax,QWORD  [rbp-0x68]
+    imul   rax,QWORD  [rbp-0x70]
+    mov    QWORD  [rbp-0x90],rax
+    mov    eax,0x0
+    leave
+```
+
+```
+$ nasm -f elf64 baby_mult.asm
+$ ld baby_mult.o
+$ gdb a.out
+(gdb) disas _start
+...
+   0x00000000004010d5 <+213>:   mov    %rax,-0x90(%rbp)
+   0x00000000004010dc <+220>:   mov    $0x0,%eax
+   0x00000000004010e1 <+225>:   leaveq
+End of assembler dump.
+(gdb) b *0x00000000004010e1
+Breakpoint 1 at 0x4010e1
+(gdb) run
+Starting program: /mnt/c/CTF/csaw/baby_mult/a.out
+
+Breakpoint 1, 0x00000000004010e1 in _start ()
+(gdb) x/4xg $rbp-0x90
+0x7fffffffdf38: 0x0000306772346d7d      0x00006c31645f7072
+0x7fffffffdf48: 0x73757033725f7634      0x000000666c61677b
+```
+
+As hex, the four numbers concatenated are `666c61677b 73757033725f7634 6c31645f7072 306772346d7d`.
 Decoded as ASCII, we get our flag.
 
 ### Flag

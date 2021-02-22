@@ -16,4 +16,11 @@ Miscellaneous CTF writeups by Team Om3ga.
 | :------------------------------------------: | --------- | ------ | ---------------------------- |
 |                    FWord                     | 57th      | 3882   | [./2020/fword](./2020/fword) |
 |   [ALLES!](https://ctftime.org/event/1091)   | 29th      | 1236   | [./2020/alles](./2020/alles) |
-| [CSAW Quals](https://ctftime.org/event/1091) | 81st      | 1655   | [./2020/csaw](./2020/alles)  |
+| [CSAW Quals](https://ctftime.org/event/1091) | 81st      | 1655   | [./2020/csaw](./2020/csaw)   |
+
+### 2021
+
+|                   CTF                    | Placement | Points | Writeups                         |
+| :--------------------------------------: | --------- | ------ | -------------------------------- |
+|                 CardHAX                  | 2nd       |        | [./2021/cardhax](./2021/cardhax) |
+| [UW CTF](https://ctftime.org/event/1289) | 1st       | 3479   | [./2021/uwctf](./2021/uwctf)     |

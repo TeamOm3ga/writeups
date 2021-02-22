@@ -87,11 +87,11 @@ $ ./exploit.py
 /work # $ cat flag.txt
 cat flag.txt
 uwctf{classic_overflow_11922e1d1d2ed8f2}
-/work # $ echo "uwctf{ban_raymo_make_aqt_owner}" > best_flag_of_all_time.txt
-echo "uwctf{ban_raymo_make_aqt_owner}" > best_flag_of_all_time.txt
+/work # $ echo "uwctf{om3ga_was_here_lmao}" > best_flag_of_all_time.txt
+echo "uwctf{om3ga_was_here_lmao}" > best_flag_of_all_time.txt
 ```
 
-Now, where are those bonus points @Raymo111?
+Now, where are those bonus points?
 
 ### Flag
 
